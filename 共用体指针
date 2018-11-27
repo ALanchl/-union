@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+union dd
+{
+	int a;
+	char b[50];
+}q,e,*p;
+
+void main()
+{
+	 p=&q;  //共用体指针必须指向一个共用体的地址从而开辟内存空间
+	p->a = 10; 
+	printf("\n=====================\n");
+	printf("\n %d \n", (*p).a);  //打印共用体的值
+	printf("\n=====================\n");
+	system("pause");
+}
